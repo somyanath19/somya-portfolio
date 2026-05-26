@@ -19,15 +19,16 @@ body{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  background:#0f172a;
   position:sticky;
   top:0;
-  background:#0f172a;
   z-index:1000;
 }
 
 .logo{
   font-size:30px;
   font-weight:700;
+  color: white;
 }
 
 .nav-links{
@@ -41,10 +42,10 @@ body{
   text-decoration:none;
   font-size:17px;
 }
-
 .menu-toggle{
   display:none;
   font-size:32px;
+  color:white;
   cursor:pointer;
 }
 
@@ -191,31 +192,41 @@ footer{
 
 /* Mobile */
 
-@media(max-width:768px){
+@media screen and (max-width:768px){
+
+
+  .navbar{
+    flex-wrap:wrap;
+  }
 
   .menu-toggle{
     display:block;
+    font-size:32px;
+    color:white;
+    cursor:pointer;
   }
 
   .nav-links{
+    display:none;
     position:absolute;
     top:80px;
-    right:0;
+    left:0;
+    width:100%;
     background:#0f172a;
-    width:220px;
     flex-direction:column;
-    padding:20px;
-    display:none;
-    text-align:center;
+    align-items:center;
+    padding:20px 0;
+    gap:20px;
   }
 
   .nav-links.active{
-    display:flex;
+    display:flex !important;
   }
 
   .hero{
     flex-direction:column;
     text-align:center;
+    margin-top: 40px;
   }
 
   .hero-text h1{
